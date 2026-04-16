@@ -1,0 +1,38 @@
+# Node / Next.js
+node_modules/
+.next/
+out/
+build/
+
+# Python / Django
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+.env
+venv/
+
+# IDE / OS
+.DS_Store
+.idea/
+.vscode/
+
+# Ignore database data
+pgdata/
+*.sqlite3
