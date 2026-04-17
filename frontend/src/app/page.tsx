@@ -1,4 +1,5 @@
 import InsightCard from '@/components/InsightCard/InsightCard';
+import TransactionTable from '@/components/TransactionTable/TransactionTable';
 import styles from './page.module.css';
 
 export default function Home() {
@@ -12,13 +13,13 @@ export default function Home() {
         <div className={styles.userIcon}>US</div>
       </header>
 
-      <section className={styles.dashboard}>
+      <section className={styles.topCards}>
         <div className={styles.balanceCard}>
           <h2>Saldo Atual</h2>
           <p className={styles.amount}>R$ 5.430,20</p>
           <span className={styles.trend}>+12.5% em relação ao mês passado</span>
         </div>
-        
+
         <div className={styles.aiSection}>
           <div className={styles.sparkle}>✨</div>
           <h3>Inteligência Financeira</h3>
@@ -26,6 +27,8 @@ export default function Home() {
           <InsightCard />
         </div>
       </section>
+
+      <TransactionTable />
     </main>
   );
 }

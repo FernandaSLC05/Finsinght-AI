@@ -20,6 +20,11 @@ export default function InsightCard() {
       const response = await fetch(`${apiUrl}/api/ai-summary/`);
       
       if (!response.ok) {
+        if (response.status === 502) {
+          throw new Error('Serviço da IA indisponível. Tente novamente mais tarde.');
+        } else if (response.status === 500) {
+          throw new Error('Erro interno do servidor. Verifique as configurações (ex: API_KEY).');
+        }
         throw new Error('Falha ao obter dados do servidor.');
       }
 
@@ -31,7 +36,7 @@ export default function InsightCard() {
 
       setInsight(data.summary);
     } catch (err: any) {
-      setError(err.message || 'Ocorreu um erro inesperado.');
+      setError(err.message || 'Ocorreu um erro de rede. Verifique se o Backend está rodando.');
     } finally {
       setLoading(false);
     }
