@@ -22,9 +22,8 @@ services:
     build:
       context: ./backend
     container_name: finsight_backend
-    environment:
-      - DATABASE_URL=postgres://finsightuser:finsightpassword@db:5432/finsight
-      - GEMINI_API_KEY=${GEMINI_API_KEY}
+    env_file:
+      - ./backend/.env
     volumes:
       - ./backend:/app
     ports:
