@@ -4,13 +4,54 @@
   animation: fadeIn 0.5s ease;
 }
 
+.headerArea {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
 .title {
   color: var(--text-primary);
   font-size: 1.2rem;
-  margin-bottom: 1rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
+}
+
+.addBtn {
+  background: linear-gradient(to right, #6366f1, #a855f7);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.addBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+}
+
+.addBtnIncome {
+  background: linear-gradient(to right, #10b981, #34d399);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-right: 10px;
+}
+
+.addBtnIncome:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
 }
 
 .tableWrapper {
@@ -56,19 +97,22 @@
 }
 
 .categoryBadge {
-  background: rgba(59, 130, 246, 0.15);
-  color: #60A5FA;
   padding: 0.25rem 0.75rem;
   border-radius: 20px;
   font-size: 0.8rem;
   font-weight: 500;
-  border: 1px solid rgba(59, 130, 246, 0.3);
+  border: 1px solid transparent;
   display: inline-block;
 }
 
-.amount {
+.amountExpense {
   font-weight: 600;
-  color: #F87171 !important; /* Gastos em vermelho leve */
+  color: #F87171 !important;
+}
+
+.amountIncome {
+  font-weight: 600;
+  color: #34D399 !important;
 }
 
 .loading {
