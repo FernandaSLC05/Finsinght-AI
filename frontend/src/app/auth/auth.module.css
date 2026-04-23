@@ -1,0 +1,106 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at top right, #1a1a2e 0%, #0f0f1a 100%);
+  padding: 20px;
+}
+
+.authBox {
+  background: rgba(30, 30, 40, 0.7);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+  padding: 40px;
+  width: 100%;
+  max-width: 440px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 40px rgba(99, 102, 241, 0.1);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  background: linear-gradient(to right, #6366f1, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+}
+
+.tabs {
+  display: flex;
+  margin-bottom: 30px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  padding: 4px;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+  color: #a1a1aa;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.activeTab {
+  background: linear-gradient(to right, #6366f1, #a855f7);
+  color: white;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+}
+
+.formGroup {
+  margin-bottom: 20px;
+}
+
+.input {
+  width: 100%;
+  padding: 14px 16px;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  color: #fff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.input:focus {
+  border-color: #a855f7;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.15);
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(to right, #6366f1, #a855f7);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-top: 10px;
+}
+
+.submitBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.4);
+}
+
+.error {
+  color: #ef4444;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 0.9rem;
+}
