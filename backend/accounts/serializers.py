@@ -15,7 +15,8 @@ class ProfileSerializer(serializers.ModelSerializer):
     def get_current_balance(self, obj):
         expenses = Transaction.objects.filter(user=obj.user, transaction_type='EXPENSE').aggregate(Sum('amount'))['amount__sum'] or 0
         incomes = Transaction.objects.filter(user=obj.user, transaction_type='INCOME').aggregate(Sum('amount'))['amount__sum'] or 0
-        return float(obj.monthly_income) + float(incomes) - float(expenses)
+        monthly_income = float(obj.monthly_income or 0)
+        return monthly_income + float(incomes) - float(expenses)
 
 class UserSerializer(serializers.ModelSerializer):
     profile = ProfileSerializer(read_only=True)
